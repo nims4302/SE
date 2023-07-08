@@ -1,0 +1,226 @@
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding-bottom: 0;
+  display: block;
+  transition: top 0.5s;
+}
+
+#top-nav:hover {
+  opacity: 0.9;
+}
+
+.about {
+  background-color: rgb(140, 140, 140);
+}
+
+.about-title {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  text-align: center;
+  width: 1000px;
+  font-weight: bold;
+}
+
+.about-text {
+  font-weight: normal;
+  font-size: 26px;
+}
+
+.credits {
+  height: 100px;
+  text-align: center;
+  display: flex;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: consolas;
+}
+
+.credits-text {
+  margin: auto;
+  background-color: #3f3f3f;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  font-weight: 999;
+}
+
+.credits-text:hover {
+  color: #ffffff;
+  box-shadow: 0 0 10px #000000, 0 0 40px #000000, 0 0 80px #000000;
+  transition-delay: 1s;
+}
+
+.credits-text span {
+  position: absolute;
+  display: block;
+}
+
+.credits-text span:nth-child(1) {
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+}
+
+.credits-text:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.credits-text span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+}
+
+.credits-text:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.credits-text span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+}
+
+.credits-text:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.credits-text span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+}
+
+.credits-text:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.logo {
+  align-content: flex-start;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 360px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  vertical-align: middle;
+  background-color: #000000;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 600px) {}

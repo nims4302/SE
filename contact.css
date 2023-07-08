@@ -1,0 +1,111 @@
+  .credits {
+      text-align: center;
+      display: flex;
+      background-color: #000;
+      font-size: 30px;
+      align-items: center;
+      color: #ff0000;
+      width: 100%;
+      font-family: consolas;
+  }
+
+  .credits-text {
+      margin-left: 250px;
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-decoration: none;
+      font-size: 24px;
+      overflow: hidden;
+      transition: 0.2s;
+      font-weight: 999;
+  }
+
+  .credits-text:hover {
+      color: #ffffff;
+      background: #000000;
+      box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+      transition-delay: 1s;
+  }
+
+  .credits-text span {
+      position: absolute;
+      display: block;
+  }
+
+  .credits-text span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #fff);
+  }
+
+  .credits-text:hover span:nth-child(1) {
+      left: 100%;
+      transition: 1s;
+  }
+
+  .credits-text span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #fff);
+  }
+
+  .credits-text:hover span:nth-child(3) {
+      right: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+  }
+
+  .credits-text span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #fff);
+  }
+
+  .credits-text:hover span:nth-child(2) {
+      top: 100%;
+      transition: 1s;
+      transition-delay: 0.25s;
+  }
+
+  .credits-text span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #fff);
+  }
+
+  .credits-text:hover span:nth-child(4) {
+      bottom: 100%;
+      transition: 1s;
+      transition-delay: 0.75s;
+  }
+
+  input {
+      border-radius: 5px;
+      padding: 5px;
+  }
+
+  a {
+      text-decoration: none;
+      color: #e51;
+  }
+
+  form {
+      width: 480px;
+      margin: auto;
+      padding: 5px;
+      border: solid black 1px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 2px #888;
+  }
